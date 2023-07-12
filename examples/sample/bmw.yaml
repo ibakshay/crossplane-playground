@@ -1,4 +1,4 @@
-apiVersion: sample.playground.crossplane.io/v1alpha1
+apiVersion: cars.playground.crossplane.io/v1alpha1
 kind: Bmw
 metadata:
   name: mr-1
