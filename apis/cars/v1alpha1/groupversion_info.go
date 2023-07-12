@@ -14,9 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// Package v1alpha1 contains the v1alpha1 group Sample resources of the Template provider.
+// Package v1alpha1 contains the v1alpha1 group Sample resources of the Playground provider.
 // +kubebuilder:object:generate=true
-// +groupName=sample.template.crossplane.io
+// +groupName=cars.playground.crossplane.io
 // +versionName=v1alpha1
 package v1alpha1
 
@@ -27,7 +27,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "sample.template.crossplane.io"
+	Group   = "cars.playground.crossplane.io"
 	Version = "v1alpha1"
 )
 

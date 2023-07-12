@@ -1,0 +1,9 @@
+apiVersion: sample.playground.crossplane.io/v1alpha1
+kind: Bmw
+metadata:
+  name: mr-1
+spec:
+  forProvider:
+    model: "318I"
+  providerConfigRef:
+    name: default
