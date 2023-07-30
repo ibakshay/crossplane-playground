@@ -1,0 +1,9 @@
+apiVersion: cars.playground.crossplane.io/v1alpha1
+kind: XCar
+metadata:
+  name: xcar-sample-2
+spec:
+  parameters:
+    carModel: "318I"
+  # providerConfigRef:
+  #  name: default

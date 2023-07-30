@@ -1,0 +1,27 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: Composition
+metadata:
+  name: car-composition
+  labels:
+    crossplane.io/xrd: xcars.cars.playground.crossplane.io
+    provider: playground
+spec:
+  compositeTypeRef:
+    apiVersion: cars.playground.crossplane.io/v1alpha1
+    kind: XCar
+    # writeConnectionSecretsToNamespace: default
+  resources:
+    - name: bmw
+      base:
+        apiVersion: cars.playground.crossplane.io/v1alpha1
+        kind: Bmw
+        spec:
+          forProvider:
+            model: "318I"
+      patches:
+        - type: FromCompositeFieldPath
+          fromFieldPath: spec.parameters.carModel
+          toFieldPath: spec.forProvider.model
+#        - type: FromCompositeFieldPath
+#          fromFieldPath: metadata.name
+#          toFieldPath: spec.forProvider.name

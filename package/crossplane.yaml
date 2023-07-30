@@ -3,8 +3,11 @@ kind: Provider
 metadata:
   name: provider-playground
   annotations:
-    meta.crossplane.io/maintainer: Crossplane Maintainers <info@crossplane.io>
+    meta.crossplane.io/maintainer: github@ibakshay
     meta.crossplane.io/source: github.com/crossplane/provider-playground
     meta.crossplane.io/license: Apache-2.0
     meta.crossplane.io/description: |
       A playground that can be used to create Crossplane providers.
+spec:
+  controller:
+    image: ibakshay/provider-playground:1.0.1
