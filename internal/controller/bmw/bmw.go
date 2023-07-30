@@ -56,7 +56,7 @@ var (
 
 // Setup adds a controller that reconciles Bmw managed resources.
 func Setup(mgr ctrl.Manager, o controller.Options) error {
-	fmt.Printf("I am a 3 series fan!")
+	fmt.Printf("I am a 3 series fan!!!")
 	name := managed.ControllerName(v1alpha1.BmwGroupKind)
 
 	cps := []managed.ConnectionPublisher{managed.NewAPISecretPublisher(mgr.GetClient(), mgr.GetScheme())}
